@@ -1,0 +1,45 @@
+<ion-toolbar>
+  <ion-buttons id="main-content">
+    <ion-menu-button auto-hide="false"></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button (click)="home()" expand="block">Home</ion-button>
+    <ion-button (click)="logout()" expand="block">Cerrar sesion</ion-button>
+  </ion-content>
+</ion-menu>
+
+<ion-content>
+  <ion-card #card>
+    <p class="ion-padding">Bienvenido a BioImplantes! {{ user }}</p>
+
+  </ion-card>
+
+  <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <ion-card #card>
+    <h1 class="ion-padding">Resumen de pedidos</h1>
+    <br>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>Pedido 1</ion-item>
+        </ion-col>
+        <ion-button fill="clear" (click)="detailsOpt()">Ver detalles</ion-button>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+  
+<ion-button (click)="play()">Play</ion-button>
+<ion-button (click)="pause()">Pause</ion-button>
+<ion-button (click)="stop()">Stop</ion-button>
